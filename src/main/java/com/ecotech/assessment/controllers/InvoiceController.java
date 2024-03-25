@@ -22,7 +22,7 @@ public class InvoiceController {
     private InvoiceService invoiceService;
 
     @GetMapping("/{invoiceId}")
-    public ResponseEntity<ResponseModel<Invoice>> fetchLoan(@PathVariable("invoiceId") String invoiceId){
+    public ResponseEntity<ResponseModel<Invoice>> fetchInvoice(@PathVariable("invoiceId") String invoiceId){
         return invoiceService.findByLinkId(invoiceId);
     }
 
